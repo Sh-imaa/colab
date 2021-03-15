@@ -22,7 +22,7 @@ def download_file(url, filename):
 
 
 def download_mnist():
-    base_url = "http://yann.lecun.com/exdb/mnist/"
+    base_url = "https://storage.googleapis.com/cvdf-datasets/mnist/"
     for name in filename:
         print("Downloading " + name[1] + "...")
         download_file(base_url + name[1], name[1])
@@ -51,7 +51,6 @@ def init():
         download_mnist()
         save_mnist()
 
-    prev_mnist_urls = MNIST.resources
     new_resources = [
         ('https://storage.googleapis.com/cvdf-datasets/mnist/train-images-idx3-ubyte.gz', prev_mnist_urls[0][1]),
         ('https://storage.googleapis.com/cvdf-datasets/mnist/train-labels-idx1-ubyte.gz', prev_mnist_urls[1][1]),
