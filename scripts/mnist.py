@@ -50,7 +50,7 @@ def init():
     else:  # Download Dataset
         download_mnist()
         save_mnist()
-
+    prev_mnist_urls = MNIST.resources
     new_resources = [
         ('https://storage.googleapis.com/cvdf-datasets/mnist/train-images-idx3-ubyte.gz', prev_mnist_urls[0][1]),
         ('https://storage.googleapis.com/cvdf-datasets/mnist/train-labels-idx1-ubyte.gz', prev_mnist_urls[1][1]),
